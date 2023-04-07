@@ -1,0 +1,117 @@
+body {
+    background-color: #9a8c98;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+
+h1{
+    margin-top: -300px;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 46px;
+    transition: all 0.5s;
+}
+
+h2 {
+    margin-bottom: -400px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 32px;
+    transition: all 0.5s;
+}
+
+h1:hover {
+    color: #242423;
+    font-size: 48px;
+}
+h2:hover {
+    color: #242423;
+    font-size: 34px;
+}
+
+.saucer {
+    width: 270px;
+    background-color: #242423;
+    height: 50px;
+    margin-top: -25px;
+    position: absolute;
+    border-radius: 45% 45% 50% 50%;
+}
+
+.coffee-cup {
+    height: 200px;
+    width: 250px;
+    position: relative;
+    background-color: #333533;
+    border-radius: 20% 20% 70% 70%;
+    margin-top: 50px;
+    z-index: 999;
+}
+
+.coffee-cup::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    width: 220px;
+    height: 70px;
+    background-color: #210f04;
+    border-radius: 50%;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 1), inset 15px 0px 15px #d7b787;
+    border: 15px solid white
+}
+
+.coffee-cup::after {
+    content: '';
+    position: absolute;
+    right: -60px;
+    top: 30px;
+    width: 50px;
+    height: 70px;
+    transform: rotate(10deg);
+    border-radius: 50% 40% 120px 0;
+    border: 18px solid #333533;
+}
+
+.steam {
+    width: 10px;
+    height: 45px;
+    background-color: white;
+    position: absolute;
+    animation: waft 2s linear infinite;
+    filter: blur(5px);
+    margin-top: 10px;
+}
+
+.steam-1 {
+    left: 43%;
+}
+
+.steam-2 {
+    left: 45%;
+}
+
+.steam-3 {
+    left: 47%;
+}
+
+.steam-4 {
+    left: 49%;
+}
+
+.steam-5 {
+    left: 51%;
+}
+
+@keyframes waft{
+    0% {
+        transform: translate3d(0,0,0)scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0,-50px,0)scale(3);
+        opacity: 0;
+    }
+}
